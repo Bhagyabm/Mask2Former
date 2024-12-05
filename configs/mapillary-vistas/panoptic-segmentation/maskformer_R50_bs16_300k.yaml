@@ -1,10 +1,10 @@
-_BASE_: Base-MapillaryVistas-PanopticSegmentation.yaml
+BASE: Base-MapillaryVistas-PanopticSegmentation.yaml
 MODEL:
   META_ARCHITECTURE: "MaskFormer"
   SEM_SEG_HEAD:
     NAME: "MaskFormerHead"
-    IGNORE_VALUE: 65
-    NUM_CLASSES: 65
+    IGNORE_VALUE: 255
+    NUM_CLASSES: 11
     LOSS_WEIGHT: 1.0
     CONVS_DIM: 256
     MASK_DIM: 256
